@@ -83,8 +83,7 @@ def get_csv_field_names(f, encoding, delimiter):
 def upgrade():
     cursor = op.get_bind().connection.cursor()
 
-    sa.sql.text(
-        """
+    op.execute("""
         INSERT INTO ref_nomenclatures.bib_nomenclatures_types (
             mnemonique,
             label_default,
