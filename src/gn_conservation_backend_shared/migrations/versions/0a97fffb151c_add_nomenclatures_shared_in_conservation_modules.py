@@ -20,8 +20,7 @@ revision = '0a97fffb151c'
 down_revision = None
 branch_labels = "nomenclatures_shared_in_conservation_modules"
 depends_on = (
-    "6015397d686a",  # ref_nomenclatures
-
+    "96a713739fdd",  # nomenclatures_inpn_data
 )
 
 """
@@ -90,7 +89,7 @@ def upgrade():
         copy_from_csv(
             csvfile,
             'ref_nomenclatures',
-            't_nomenclatures', 
+            't_nomenclatures',
             dest_cols=(
                 'id_type',
                 'cd_nomenclature',
@@ -104,17 +103,17 @@ def upgrade():
             ),
             source_cols=(
                 'ref_nomenclatures.get_id_nomenclature_type(type_nomenclature_code)',
-                'cd_nomenclature', 
-                'mnemonique', 
-                'label_default', 
-                'definition_default', 
-                'label_fr', 
+                'cd_nomenclature',
+                'mnemonique',
+                'label_default',
+                'definition_default',
+                'label_fr',
                 'definition_fr',
                 'ref_nomenclatures.get_id_nomenclature(type_nomenclature_code, cd_nomenclature_broader)',
                 'hierarchy',
             ),
-            header=True, 
-            encoding='UTF-8', 
+            header=True,
+            encoding='UTF-8',
             delimiter=','
         )
 
@@ -128,7 +127,7 @@ def delete_nomenclatures(mnemonique):
         """
         DELETE FROM ref_nomenclatures.t_nomenclatures
         WHERE id_type = (
-            SELECT id_type 
+            SELECT id_type
             FROM ref_nomenclatures.bib_nomenclatures_types
             WHERE mnemonique = :mnemonique
         );
