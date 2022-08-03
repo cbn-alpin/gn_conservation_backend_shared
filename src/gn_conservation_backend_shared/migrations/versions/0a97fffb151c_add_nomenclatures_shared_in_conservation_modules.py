@@ -85,7 +85,7 @@ def upgrade():
 
     sa.sql.text(
         """
-        INSERT INTO bib_nomenclatures_types (
+        INSERT INTO ref_nomenclatures.bib_nomenclatures_types (
             mnemonique,
             label_default,
             definition_default,
