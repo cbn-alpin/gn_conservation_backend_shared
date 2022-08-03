@@ -82,6 +82,31 @@ def get_csv_field_names(f, encoding, delimiter):
 
 def upgrade():
     cursor = op.get_bind().connection.cursor()
+
+    sa.sql.text(
+        """
+        INSERT INTO bib_nomenclatures_types (
+            mnemonique,
+            label_default,
+            definition_default,
+            label_fr,
+            definition_fr,
+            source,
+            meta_create_date,
+            meta_update_date
+        ) VALUES (
+            'TYPE_PERTURBATION',
+            'Type de perturbations',
+            'Code d''origine de la donnée',
+            'Type de perturbations',
+            'Code d''origine de la donnée',
+            'CBNA',
+            '2019-06-03 00:00:00',
+            '2019-06-03 00:00:00'
+        ) ;
+        """
+    )
+
     with importlib.resources.open_text(
         "gn_conservation_backend_shared.migrations.data", "perturbation_nomenclatures.csv"
     ) as csvfile:
