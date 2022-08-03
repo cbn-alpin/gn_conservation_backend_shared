@@ -107,9 +107,9 @@ def upgrade():
     )
 
     with importlib.resources.open_text(
-        "gn_conservation_backend_shared.migrations.data", "perturbation_nomenclatures.csv"
+        "gn_conservation_backend_shared.migrations.data", "nomenclatures.csv"
     ) as csvfile:
-        logger.info("Inserting perturbations nomenclatures…")
+        logger.info("Inserting perturbations and others Conservation nomenclatures…")
         copy_from_csv(
             csvfile,
             'ref_nomenclatures',
@@ -143,10 +143,11 @@ def upgrade():
 
 
 def downgrade():
-    delete_nomenclatures("TYPE_PERTURBATION")
+    delete_nomenclatures_by_type("TYPE_PERTURBATION")
+    delete_nomenclatures("TYPE_SITE", ("HAB", "ZP"))
 
 
-def delete_nomenclatures(mnemonique):
+def delete_nomenclatures_by_type(mnemonique):
     operation = sa.sql.text(
         """
         DELETE FROM ref_nomenclatures.t_nomenclatures
@@ -160,3 +161,20 @@ def delete_nomenclatures(mnemonique):
         """
     )
     op.get_bind().execute(operation, {"mnemonique": mnemonique})
+
+def delete_nomenclatures(type_mnemonique, cd_nomenclature_list):
+    operation = sa.sql.text(
+        """
+        DELETE FROM ref_nomenclatures.t_nomenclatures
+        WHERE id_type = (
+            SELECT id_type
+            FROM ref_nomenclatures.bib_nomenclatures_types
+            WHERE mnemonique = :typeMnemonique
+        )
+            AND cd_nomenclature IN :cdNomenclatureList;
+        """
+    )
+    op.get_bind().execute(operation, {
+        "typeMnemonique": type_mnemonique,
+        "cdNomenclatureList": cd_nomenclature_list,
+    })
