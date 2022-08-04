@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased
 
 
+## [0.2.0] - 2022-08-04
+
+### Added
+
+- Add Alembic branches "`add_M25m_mesh`", "`add_M50m_mesh`", "`add_M100m_mesh`" to GeoNature.
+
+
 ## [0.1.0] - 2022-08-03
 
 ### Added
