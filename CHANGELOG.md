@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased
 
 
+## [0.3.0] - 2022-08-05
+
+### Changed
+
+- Set values for the `cd_nomenclature_broader` and `hierarchy` fields to the `HAB` and `ZP`
+values of the `TYPE_SITE` nomenclature.
+
+
 ## [0.2.0] - 2022-08-04
 
 ### Added

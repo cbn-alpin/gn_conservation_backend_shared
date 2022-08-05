@@ -63,5 +63,5 @@ TYPE_PERTURBATION,Arg,Arrachage,Arrachage,Gestion des invasives: Arrachage,Arrac
 TYPE_PERTURBATION,Fag,Fauchage,Fauchage,Gestion des invasives: Fauchage,Fauchage,Gestion des invasives: Fauchage,GeI,.009.002
 TYPE_PERTURBATION,Dbs,Débroussaillage,Débroussaillage,Gestion des invasives: Débroussaillage,Débroussaillage,Gestion des invasives: Débroussaillage,GeI,.009.003
 TYPE_PERTURBATION,Reb,Recouvrement avec bâches,Recouvrement avec bâches,Gestion des invasives: Recouvrement avec bâches,Recouvrement avec bâches,Gestion des invasives:Recouvrement avec bâches,GeI,.009.004
-TYPE_SITE,ZP,Zone de prospection,Zone de prospection,Zone de prospection issu du module Suivi Flore Territoire (SFT),Zone de prospection,Zone de prospection issu du module Suivi Flore Territoire (SFT),,
-TYPE_SITE,HAB,Zone d'habitat,Zone d'habitat,Zone d'habitat - issu du module Suivi Habitat Territoire (SHT),Zone d'habitat,Zone d'habitat - issu du module Suivi Habitat Territoire (SHT),,
+TYPE_SITE,ZP,Zone de prospection,Zone de prospection,Zone de prospection issu du module Suivi Flore Territoire (SFT),Zone de prospection,Zone de prospection issu du module Suivi Flore Territoire (SFT),0,.002
+TYPE_SITE,HAB,Zone d'habitat,Zone d'habitat,Zone d'habitat - issu du module Suivi Habitat Territoire (SHT),Zone d'habitat,Zone d'habitat - issu du module Suivi Habitat Territoire (SHT),0,.003
