@@ -50,7 +50,7 @@ def delete_mesh(mesh_code):
         DELETE FROM ref_geo.l_areas
         WHERE id_type = (
             SELECT id_type
-            FROM ref_nomenclatures.bib_areas_types
+            FROM ref_geo.bib_areas_types
             WHERE type_code = :meshCode
         );
 

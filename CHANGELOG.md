@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased
 
 
+## [0.3.1] - 2022-08-08
+
+### Fixed
+
+- Use correct schema name (`ref_geo`) in "`add_M25m_mesh`", "`add_M50m_mesh`" and
+"`add_M100m_mesh`" branches.
+
+
 ## [0.3.0] - 2022-08-05
 
 ### Changed
