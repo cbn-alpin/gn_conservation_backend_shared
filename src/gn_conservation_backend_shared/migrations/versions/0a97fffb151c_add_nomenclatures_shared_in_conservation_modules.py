@@ -141,7 +141,7 @@ def upgrade():
                 'label_default',
                 'definition_default',
                 'label_fr',
-                'definition_fr',
+                'definition_fr',POSITION_PLACETTE
                 'id_broader',
                 'hierarchy',
             ),
@@ -164,6 +164,8 @@ def upgrade():
 
 def downgrade():
     delete_nomenclatures_by_type("TYPE_PERTURBATION")
+    delete_nomenclatures_by_type("STRATE_PLACETTE")
+    delete_nomenclatures_by_type("POSITION_PLACETTE")
     delete_nomenclatures("TYPE_SITE", ("HAB", "ZP"))
 
 
