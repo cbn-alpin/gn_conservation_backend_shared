@@ -65,3 +65,15 @@ TYPE_PERTURBATION,Dbs,Débroussaillage,Débroussaillage,Gestion des invasives: D
 TYPE_PERTURBATION,Reb,Recouvrement avec bâches,Recouvrement avec bâches,Gestion des invasives: Recouvrement avec bâches,Recouvrement avec bâches,Gestion des invasives:Recouvrement avec bâches,GeI,.009.004
 TYPE_SITE,ZP,Zone de prospection,Zone de prospection,Zone de prospection issu du module Suivi Flore Territoire (SFT),Zone de prospection,Zone de prospection issu du module Suivi Flore Territoire (SFT),0,.002
 TYPE_SITE,HAB,Zone d'habitat,Zone d'habitat,Zone d'habitat - issu du module Suivi Habitat Territoire (SHT),Zone d'habitat,Zone d'habitat - issu du module Suivi Habitat Territoire (SHT),0,.003
+STRATE_PLACETTE, Rcn, Recouvrement sol nu, Recouvrement sol nu, Recouvrement sol nu, Recouvrement sol nu, Recouvrement sol nu,0,.001
+STRATE_PLACETTE, Rgc, Recouvrement Gravier, cailloux < 10 cm, Recouvrement Gravier, cailloux < 10 cm, Recouvrement Gravier,0,.002
+STRATE_PLACETTE, Rbc, Recouvrement Blocs/rochers, Recouvrement Blocs/rochers, Recouvrement Blocs/rochers, Recouvrement Blocs/rochers, Recouvrement Blocs/rochers,0,.002
+STRATE_PLACETTE, Rvt, Recouvrement Végétation total, Recouvrement Végétation total, Recouvrement Végétation total, Recouvrement Végétation total, Recouvrement Végétation total,0,.003
+STRATE_PLACETTE, Rbr, Recouvrement Bryophytes, Recouvrement Bryophytes, Recouvrement Bryophytes, Recouvrement Bryophytes, Recouvrement Bryophytes,0,.004
+STRATE_PLACETTE, Rdj, Recouvrement Déjections, Recouvrement Déjections, Recouvrement Déjections, Recouvrement Déjections, Recouvrement Déjections,0,.005
+STRATE_PLACETTE, Rpi, Recouvrement Piétinement, Recouvrement Piétinement, Recouvrement Piétinement, Recouvrement Piétinement, Recouvrement Piétinement,0,.006
+STRATE_PLACETTE, Rab, Recouvrement Abroutissement, Recouvrement Abroutissement, Recouvrement Abroutissement, Recouvrement Abroutissement, Recouvrement Abroutissement,0,.007
+POSITION_PLACETTE, Pha, Position en haut, Position en haut, Positions de placette sur un transect: Position en haut, Position en haut, Positions de placette sur un transect: Position en haut),0,.001
+POSITION_PLACETTE, Pba, Position en bas, Position en bas, Positions de placette sur un transect: Position en bas, Position en bas, Positions de placette sur un transect: Position en bas),0,.002
+POSITION_PLACETTE, Pdr, Position à droite, Position à droite, Positions de placette sur un transect: Position à droite, Position à droite, Positions de placette sur un transect: Position à droite),0,.003
+POSITION_PLACETTE, Pga, Position à gauche, Position à gauche, Positions de placette sur un transect: Position à gauche, Position à gauche, Positions de placette sur un transect: Position à gauche),0,.004
