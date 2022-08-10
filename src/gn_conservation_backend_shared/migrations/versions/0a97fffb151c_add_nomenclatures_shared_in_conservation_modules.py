@@ -102,6 +102,26 @@ def upgrade():
             'CBNA',
             '2019-06-03 00:00:00',
             '2019-06-03 00:00:00'
+        ),
+        (
+            'STRATE_PLACETTE',
+            'Strates par placette',
+            'Nomenclature de strates pour placette.',
+            'Nomenclature de strates pour placette.',
+            'Nomenclature de strates pour placette.',
+            'CBNA',
+            '2019-06-03 00:00:00',
+            '2019-06-03 00:00:00'
+        ),
+        (
+            'POSITION_PLACETTE',
+            'Positions de placette sur un transect',
+            'Nomenclature de position de placette sur un transect.',
+            'Nomenclature de position de placette sur un transect.',
+            'Nomenclature de position de placette sur un transect.',
+            'CBNA',
+            '2019-06-03 00:00:00',
+            '2019-06-03 00:00:00'
         ) ;
         """
     )
