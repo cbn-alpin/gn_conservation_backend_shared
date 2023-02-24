@@ -8,6 +8,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased
 
+## [0.5.0] - 2023-02-24
+
+### Added
+- Added utility functions for webservices: debug, prepare output and input.
+- Added utility functions to migrate data to module, habitat, monitoring and nomenclatures.
+- Added utility functions to use CSV files to import data into the database.
+
+### Changed
+- Using utility functions in migration revision files.
+
+### Remove
+- Remove `STRATE_PLACETTE` and `POSITION_PLACETTE` nomenclatures. Move directly to Monitoring Habitat Station.
 
 ## [0.4.0] - 2022-08-10
 
