@@ -21,3 +21,17 @@ def delete_sites(module_code):
         """
     )
     op.get_bind().execute(operation, {"moduleCode": module_code})
+
+
+def delete_visits_by_dataset(dataset_code):
+    operation = text(
+        """
+        DELETE from gn_monitoring.t_base_visits WHERE id_dataset = (
+            SELECT id_dataset
+            FROM gn_meta.t_datasets
+            WHERE dataset_shortname = :metadataCode
+            LIMIT 1
+        );
+        """
+    )
+    op.get_bind().execute(operation, {"metadataCode": dataset_code})
