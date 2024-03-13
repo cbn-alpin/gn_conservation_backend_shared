@@ -1,3 +1,6 @@
+alembic
+pypnnomenclature
 sqlalchemy<2.0
+utils-flask-sqlalchemy
 
 
