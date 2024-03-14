@@ -7,11 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.5.1] - 2024-03-13
+## [0.5.1] - 2024-03-14
 
 ### Changed
 
-- Minimum version of sqlalchemy (v2.0)
+- Update requirements for at least Geonature minimum version tested 2.9.2
 
 ## [0.5.0] - 2023-02-24
 
