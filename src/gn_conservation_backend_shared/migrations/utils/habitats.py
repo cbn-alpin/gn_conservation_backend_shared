@@ -1,9 +1,11 @@
 from alembic import op
-import sqlalchemy.sql as text
+import sqlalchemy as sa
 
+def test(metadata_name):
+    return print(f"metadata_name : {metadata_name}")
 
 def add_habitats_list(habitat_list_name: str):
-    operation = text(
+    operation = sa.sql.text(
         """
         INSERT INTO ref_habitats.bib_list_habitat (list_name)
         VALUES (:habitatListName) ;
@@ -13,7 +15,7 @@ def add_habitats_list(habitat_list_name: str):
 
 
 def delete_habitats_list(habitat_list_name: str):
-    operation = text(
+    operation = sa.sql.text(
         """
         DELETE FROM ref_habitats.cor_list_habitat WHERE id_list IN (
             SELECT id_list

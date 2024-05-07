@@ -1,9 +1,9 @@
 from alembic import op
-import sqlalchemy.sql as text
+import sqlalchemy as sa
 
 
 def delete_sites(module_code):
-    operation = text(
+    operation = sa.sql.text(
         """
         -- Create temporary table to keep in memory all the sites linked to module
         CREATE TEMPORARY TABLE sites_module(
@@ -45,7 +45,7 @@ def delete_sites(module_code):
 
 
 def delete_visits_by_dataset(dataset_code):
-    operation = text(
+    operation = sa.sql.text(
         """
         DELETE from gn_monitoring.t_base_visits WHERE id_dataset = (
             SELECT id_dataset

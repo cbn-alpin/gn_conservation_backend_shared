@@ -1,9 +1,9 @@
 from alembic import op
-import sqlalchemy.sql as text
+import sqlalchemy as sa
 
 
 def update_module(code: str, label: str, description: str, doc_url: str):
-    operation = text(
+    operation = sa.sql.text(
         """
         UPDATE gn_commons.t_modules
         SET
@@ -25,7 +25,7 @@ def update_module(code: str, label: str, description: str, doc_url: str):
 
 
 def delete_module(code: str):
-    operation = text(
+    operation = sa.sql.text(
         """
         -- Unlink module from dataset
         DELETE FROM gn_commons.cor_module_dataset
